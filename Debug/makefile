@@ -40,8 +40,8 @@ SPI_Test_RGBWSK6812.bin \
 all: SPI_Test_RGBWSK6812.elf secondary-outputs
 
 # Tool invocations
-SPI_Test_RGBWSK6812.elf: $(OBJS) $(USER_OBJS) C:\Users\santt\Desktop\SPI_Test_RGBWSK6812\STM32F042K6TX_FLASH.ld
-	arm-none-eabi-gcc -o "SPI_Test_RGBWSK6812.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\santt\Desktop\SPI_Test_RGBWSK6812\STM32F042K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Test_RGBWSK6812.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+SPI_Test_RGBWSK6812.elf: $(OBJS) $(USER_OBJS) C:\Users\santt\Desktop\The\ 3bit\ SPI\ SK6812\STM32F042K6TX_FLASH.ld
+	arm-none-eabi-gcc -o "SPI_Test_RGBWSK6812.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0 -T"C:\Users\santt\Desktop\The 3bit SPI SK6812\STM32F042K6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SPI_Test_RGBWSK6812.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

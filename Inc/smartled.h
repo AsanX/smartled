@@ -19,14 +19,16 @@
 */
 
 /*	leds in array	*/
-#define maxleds 	256
+#define maxleds 	144
+
+/*	color and bits	*/
+#define colors		3
 
 /*		codes		*/
 #define code_1  	0b110
 #define code_0      0b100
 
-/*	color and bits	*/
-#define bits		3
+
 
 /* 	reset code		*/
 #define reset 		10

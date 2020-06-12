@@ -1,5 +1,5 @@
-smartled.c:18:6:smartled_init	24	static
-smartled.c:29:6:smartled_set_all	32	static
-smartled.c:37:6:smartled_set	32	static
-smartled.c:99:6:smartled_write	8	static
-smartled.c:105:6:smartled_rgbw	32	static
+smartled.c:23:6:smartled_init	24	static
+smartled.c:36:6:smartled_set_all	32	static
+smartled.c:44:6:smartled_set	32	static
+smartled.c:106:6:smartled_write	8	static
+smartled.c:111:6:smartled_rgbw	40	static

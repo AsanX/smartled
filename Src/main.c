@@ -100,58 +100,67 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 50,0,0);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 255,0,0);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 50,50,0);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 255,255,0);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 50,0,50);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 255,0,255);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 50,50,50);
-	  }
-	  for(uint16_t i = 0; i < maxleds; i=i+8) {
-		  smartled_rgbw(i ,8, 255,255,255);
+
+	  for(uint8_t i = 0; i < 72; i++) {
+		  smartled_set(i, 50, 50, 50);
+		  smartled_set(maxleds-i,50,50,50);
+		  smartled_write();
+		  HAL_Delay(20);
 	  }
 
-	  for(uint16_t i = 0; i < 255; i=i+5) {
-		  smartled_set_all(i,0,0);
-	  }
-	  for(uint16_t i = 255; i > 0; i=i-5) {
-		  smartled_set_all(i,0,0);
-	  }
-
-	  for(uint16_t i = 0; i < 255; i=i+5) {
-		  smartled_set_all(0,i,0);
-	  }
-	  for(uint16_t i = 255; i > 0; i=i-5) {
-		  smartled_set_all(0,i,0);
-	  }
-
-	  for(uint16_t i = 0; i < 255; i=i+5) {
-		  smartled_set_all(0,0,i);
-	  }
-	  for(uint16_t i = 255; i > 0; i=i-5) {
-		  smartled_set_all(0,0,i);
-	  }
-
-	  for(uint8_t i = 0; i < 9; i++) {
-		  smartled_rgbw(0, i, 100, 20, 70);
-		  smartled_rgbw(248, i, 70, 20, 100);
-		  HAL_Delay(100);
-	  }
 	  smartled_set_all(0,0,0);
+
+	  for(uint8_t i = 0; i < 72; i++) {
+		  smartled_set(i, 100-i, 0, 30+i);
+		  if(i > 0) {
+			  smartled_set(i-1, 0, 0,0);
+			  smartled_set(maxleds-i, 100-i, 0, 30+i);
+			  smartled_set(maxleds-i+1, 0, 0, 0);
+		  }
+		  else {
+			  smartled_set(maxleds, 100-i, 0, 30+i);
+		  }
+
+
+		  smartled_write();
+		  HAL_Delay(20);
+	  }
+
+	  smartled_set_all(0,0,0);
+	  smartled_write();
+
+	  for(uint8_t i = 0; i < 72; i++) {
+		  smartled_set(i, 100-i, 0, 30+i);
+		  if(i > 0) {
+			  smartled_set(i-1, 0, 0,0);
+			  smartled_set(maxleds-i, 100-i, 0, 30+i);
+			  smartled_set(maxleds-i+1, 0, 0, 0);
+		  }
+		  else {
+			  smartled_set(maxleds, 100-i, 0, 30+i);
+		  }
+
+
+		  smartled_write();
+		  HAL_Delay(5);
+	  }
+
+	  for(uint8_t i = 0; i < 72; i++) {
+		  smartled_set(i, 100-i, 0, 30+i);
+		  if(i > 0) {
+			  smartled_set(maxleds-i, 100-i, 0, 30+i);
+		  }
+		  else {
+			  smartled_set(maxleds, 100-i, 0, 30+i);
+		  }
+
+
+		  smartled_write();
+		  HAL_Delay(20);
+	  }
+
+
+
   }
   /* USER CODE END 3 */
 }
