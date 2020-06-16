@@ -140,7 +140,6 @@ int main(void)
 			  smartled_set(maxleds, 100-i, 0, 30+i);
 		  }
 
-
 		  smartled_write();
 		  HAL_Delay(5);
 	  }
