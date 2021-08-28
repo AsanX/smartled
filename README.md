@@ -1,3 +1,3 @@
 # Smartled
 
-Smartled is library that uses spi to send data to leds like WS2812B or SK6812.
+Smartled is a library that uses spi to send data to leds like WS2812B or SK6812.
